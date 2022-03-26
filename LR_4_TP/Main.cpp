@@ -67,8 +67,8 @@ template <class T, typename TT>
 void work_with_queue(T* stptr, TT x)
 {
 	int choise, size, exit = 1;
-	TT element;
-
+	//TT element;
+	
 	try
 	{
 		cout << "¬ведите размер очереди(от 0 до 50):\n--> ";
@@ -80,11 +80,8 @@ void work_with_queue(T* stptr, TT x)
 	}
 	catch (const char* ex) { cout << ex << endl; }
 
-	T st1(size);
-	stptr = new T[1]; //в мэине мы объ€вили указатель на стек данного типа, здесь мы создали сам стек и задаем массив стеков с помощью объ€вленного указател€
-	stptr[0] = st1; //в самую первую €чейку массива стека заносим только что объ€вленный стек
-	T* sttmp = 0; //пригодитс€ при создании новых стеков
-	
+	T q;
+
 
 	system("cls");
 
@@ -103,10 +100,11 @@ void work_with_queue(T* stptr, TT x)
 		switch (choise)
 		{
 		case 1:
-			cout << "¬ведите элемент стека: ";
-			cin >> element;
-			
-			
+			int elem;
+			cout << "¬ведите элемент стека, который хотите добавить: ";
+			cin >> elem;
+			q = q + elem;
+			//q.print();
 
 			system("pause");
 			cout << "\n";
@@ -114,9 +112,7 @@ void work_with_queue(T* stptr, TT x)
 		case 2:
 			try
 			{
-				//if (проверку сюда)
-				//	throw "—тек пуст, извлекать нечего!";
-				
+			
 
 			}
 			catch (const char* ex) { cout << ex << endl; }
@@ -127,7 +123,8 @@ void work_with_queue(T* stptr, TT x)
 
 
 		case 4:
-			//stptr[num_of_stack].print();
+			
+			//q.print();
 			//как-то вызвать метод принт
 			cout << "\n";
 			system("pause");
