@@ -10,7 +10,7 @@ template<class T>
 void sort_direct_merge(T a[], int fsize)  // шаблонная функция сортировки слиянием
 {
     if (fsize < 2)return;
-    sort_direct_merge(a, fsize / 2);
+    sort_direct_merge(a, fsize / 2); 
     sort_direct_merge(&a[fsize / 2], fsize - (fsize / 2));
     T* buf = new T[fsize];
     int idbuf = 0, idl = 0, idr = fsize / 2;
